@@ -1,64 +1,98 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import "./styles/styles.scss";
-const DashBoardComponent = () =>(
+const DashBoardComponent = () => (
     <div>
-        This is the add component
+        Dashboard
     </div>
 );
 
- 
-const AddExpensesComponent = () =>(
+
+const AddExpensesComponent = () => (
     <div>
-        Caralho é nos
+        Create page$$$$$$$
     </div>
 );
 
 const EditExpenses = () => (
 
     <div>
-        Edit expenses
+        Edit expenses____
     </div>
 );
 
 const HelpPage = () => (
     <div>
-        Help page
+        Help page *******
     </div>
 )
 const NotFoundPage = () => (
     <div>
         <h1>
-           404 
+            404 - Not found
+            <Link to="/">Go home</Link>
         </h1>
     </div>
+);
+const Header = () => (
+    <header>
+        <h1>
+            <strong>
+                Expensify
+            </strong>
+            </h1>
+        <nav>
+            <ul>
+                <li>
+            <Link to="/">Go home</Link>
+
+                </li>
+                <li>
+            <Link to="/create">Create</Link>
+
+                </li>
+                <li>
+            <Link to="/Edit">Edit</Link>
+
+                </li>
+                <li>
+            <Link to="/help">Help</Link>
+
+                </li>
+            </ul>
+        </nav>
+    </header>
 );
 
 const routes = (
     <BrowserRouter>
+        <div>
+
+            <Header />
             <Switch>
-            <Route
-                path="/"
-                component={DashBoardComponent}
-                exact={true}
+                <Route
+                    path="/"
+                    component={DashBoardComponent}
+                    exact={true}
                 />
-            <Route 
-                path="/create"
-                component={AddExpensesComponent}
+                <Route
+                    path="/create"
+                    component={AddExpensesComponent}
                 />
-                <Route 
+                <Route
                     path="/edit"
                     component={EditExpenses}
                 />
-                <Route 
+                <Route
                     path="/help"
                     component={HelpPage}
                 />
-                <Route 
+                <Route
                     component={NotFoundPage}
                 />
-           </Switch>
+            </Switch>
+        </div>
     </BrowserRouter>
 );
 
