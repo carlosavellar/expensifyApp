@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Link, NavLink} from "react-router-dom";
 import "./styles/styles.scss";
 const DashBoardComponent = () => (
     <div>
@@ -44,19 +44,21 @@ const Header = () => (
         <nav>
             <ul>
                 <li>
-                    <Link to="/">Dashboard</Link>
+                    <NavLink activeClassName="is-active" to="/" exact={true}>
+                        Dashboard
+                    </NavLink>
 
                 </li>
                 <li>
-                    <Link to="/create">Create</Link>
+                    <NavLink activeClassName="is-active" to="/create">Create</NavLink>
 
                 </li>
                 <li>
-                    <Link to="/Edit">Edit</Link>
+                    <NavLink activeClassName="is-active" to="/Edit">Edit</NavLink>
 
                 </li>
                 <li>
-                    <Link to="/help">Help</Link>
+                    <NavLink activeClassName="is-active" to="/help">Help</NavLink>
 
                 </li>
             </ul>
