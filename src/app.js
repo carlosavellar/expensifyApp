@@ -8,7 +8,6 @@ const DashBoardComponent = () => (
     </div>
 );
 
-
 const AddExpensesComponent = () => (
     <div>
         Create page$$$$$$$
@@ -41,23 +40,23 @@ const Header = () => (
             <strong>
                 Expensify
             </strong>
-            </h1>
+        </h1>
         <nav>
             <ul>
                 <li>
-            <Link to="/">Go home</Link>
+                    <Link to="/">Dashboard</Link>
 
                 </li>
                 <li>
-            <Link to="/create">Create</Link>
+                    <Link to="/create">Create</Link>
 
                 </li>
                 <li>
-            <Link to="/Edit">Edit</Link>
+                    <Link to="/Edit">Edit</Link>
 
                 </li>
                 <li>
-            <Link to="/help">Help</Link>
+                    <Link to="/help">Help</Link>
 
                 </li>
             </ul>
@@ -68,7 +67,6 @@ const Header = () => (
 const routes = (
     <BrowserRouter>
         <div>
-
             <Header />
             <Switch>
                 <Route
