@@ -34,7 +34,7 @@ const routes = (
             <Route
                 path="/"
                 component={DashBoardComponent}
-                excat={true}
+                exact={true}
                 />
             <Route 
                 path="/create"
