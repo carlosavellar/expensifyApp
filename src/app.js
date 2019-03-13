@@ -11,24 +11,46 @@ const DashBoardComponent = () =>(
  
 const AddExpensesComponent = () =>(
     <div>
-        This is the add component
+        Caralho é nos
     </div>
 );
 
+const EditExpenses = () => (
+
+    <div>
+        Edit expenses
+    </div>
+);
+
+const HelpPage = () => (
+    <div>
+        Help page
+    </div>
+)
+
 const routes = (
     <BrowserRouter>
-   
+            <div>
             <Route
                 path="/"
                 component={DashBoardComponent}
                 excat={true}
                 />
-     
-
+            <Route 
+                path="/create"
+                component={AddExpensesComponent}
+                />
+                <Route 
+                    path="/edit"
+                    component={EditExpenses}
+                />
+                <Route 
+                    path="/help"
+                    component={HelpPage}
+                />
+           </div>
     </BrowserRouter>
 );
-
-
 
 const app = document.querySelector("#app");
 ReactDOM.render(routes, app);
