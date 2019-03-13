@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./styles/styles.scss";
 const DashBoardComponent = () =>(
     <div>
@@ -27,10 +27,17 @@ const HelpPage = () => (
         Help page
     </div>
 )
+const NotFoundPage = () => (
+    <div>
+        <h1>
+           404 
+        </h1>
+    </div>
+);
 
 const routes = (
     <BrowserRouter>
-            <div>
+            <Switch>
             <Route
                 path="/"
                 component={DashBoardComponent}
@@ -48,7 +55,10 @@ const routes = (
                     path="/help"
                     component={HelpPage}
                 />
-           </div>
+                <Route 
+                    component={NotFoundPage}
+                />
+           </Switch>
     </BrowserRouter>
 );
 
